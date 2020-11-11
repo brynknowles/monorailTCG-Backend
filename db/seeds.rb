@@ -13,8 +13,8 @@ puts "the lotion in the basket"
 
 10.times do 
     user = User.create!(
-        name: Faker::Food.description,
-        email: Faker::Food.fruits,
+        name: Faker::FunnyName.two_word_name,
+        email: Faker::Internet.email,
         age: rand(1...50)
     )
 
