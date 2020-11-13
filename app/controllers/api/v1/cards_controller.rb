@@ -14,9 +14,18 @@ class Api::V1::CardsController < ApplicationController
         render json: @card.user
       end
 
+      def update
+        @card.update(card_params)
+        render json: @card
+      end
+
       def destroy
         @card = Card.find(params[:id])
         @card.destroy
+      end
+
+      def reverse 
+        render json: {name: params[:name].reverse}
       end
 
 
