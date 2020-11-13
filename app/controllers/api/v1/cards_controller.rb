@@ -10,8 +10,8 @@ class Api::V1::CardsController < ApplicationController
       end
 
       def create
-        card = Card.create(card_params)
-        render json: card.user
+        @card = Card.create(card_params)
+        render json: @card.user
       end
 
       def destroy
