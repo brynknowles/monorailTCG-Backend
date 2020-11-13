@@ -14,14 +14,15 @@ class Api::V1::CardsController < ApplicationController
         render json: card.user
       end
 
-      def delete
-        
+      def destroy
+        @card = Card.find(params[:id])
+        @card.destroy
       end
 
 
       private
 
       def card_params
-        params.permit(:character, :image, :quote, :user_id)
+        params.require(:card).permit(:character, :image, :quote, :user_id)
       end
 end

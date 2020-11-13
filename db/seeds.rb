@@ -23,12 +23,12 @@ puts "the lotion in the basket"
 #     age: rand(1...50)
 # )
 
-# Card.create!(
-#     character: "Barney Gumble",
-#     image: "https://static.simpsonswiki.com/images/d/de/Barney_Gumble.png",
-#     quote: "BURRRRRRPPPP!!!",
-#     user_id: 12
-# )
+Card.create!(
+    character: "Barney Gumble",
+    image: "https://static.simpsonswiki.com/images/d/de/Barney_Gumble.png",
+    quote: "BURRRRRRPPPP!!!",
+    user_id: 12
+)
 
 Card.create!(
     character: "Edna Krabappel",
